@@ -1,36 +1,19 @@
 package com.gainsight.ticketbooking.dto;
 
 import com.gainsight.ticketbooking.entity.Status;
+import lombok.Builder;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
+@Data
+@Builder
 public class TicketDto {
 
     private int ticketNo;
     private Status status;
-    private LocalDateTime time;
+    private LocalDateTime bookingTime;
 
-    public int getTicketNo() {
-        return ticketNo;
-    }
 
-    public void setTicketNo(int ticketNo) {
-        this.ticketNo = ticketNo;
-    }
 
-    public Status getStatus() {
-        return status;
-    }
-
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
-    public LocalDateTime getTime() {
-        return time;
-    }
-
-    public void setTime(LocalDateTime time) {
-        this.time = time;
-    }
 }
