@@ -21,7 +21,7 @@ public class BookingService {
 
     @Autowired
     TicketRepo repo;
-    Logger log = LoggerFactory.getLogger("SampleLogger");
+    Logger log = LoggerFactory.getLogger(this.getClass());
 
     public List<TicketDto> getTickets(){
         log.debug("At getTickets Service");

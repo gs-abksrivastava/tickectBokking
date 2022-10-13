@@ -20,7 +20,7 @@ public class BookingController {
 
     @Autowired
     BookingService bookingService;
-    Logger log = LoggerFactory.getLogger("MyLogger");
+    Logger log = LoggerFactory.getLogger(this.getClass());
 
     @GetMapping("tickets")
     public List<TicketDto> getAllTickets(){
