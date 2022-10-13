@@ -42,7 +42,7 @@ public class BookingService {
     }
 
     public ResponseEntity<Response> bookTicket(Ticket ticket){
-
+        ticket.setTime(LocalDateTime.now());
         log.debug("At bookTicket Service");
         log.info("Adding the record to database");
         Ticket existingTicket = repo.findByTicketNo(ticket.getTicketNo());
@@ -53,7 +53,6 @@ public class BookingService {
             response.setStatusMsg("Given ticket No. already exits, please change it");
             creationStatus = HttpStatus.BAD_REQUEST;
         }else {
-            ticket.setTime(LocalDateTime.now());
             repo.save(ticket);
             response.setTicket(ticket);
             response.setStatusMsg("Ticket Booked Successfully");
