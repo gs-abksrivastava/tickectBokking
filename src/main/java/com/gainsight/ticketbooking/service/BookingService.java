@@ -8,4 +8,6 @@ import java.util.List;
 public interface BookingService {
     public boolean bookTicket(TicketDto ticketDto);
     public List<TicketDto> getTickets();
+
+    public boolean publishTicket(TicketDto ticketDto);
 }

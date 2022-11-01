@@ -18,6 +18,7 @@ public class Ticket {
     private int ticketNo;
     private Status status;
     private LocalDateTime bookingTime;
+    private Type type;
 
 
 }

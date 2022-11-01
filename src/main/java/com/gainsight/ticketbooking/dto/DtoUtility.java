@@ -14,6 +14,7 @@ public class DtoUtility {
                 .ticketNo(ticket.getTicketNo())
                 .bookingTime(ticket.getBookingTime())
                 .status(ticket.getStatus())
+                .type(ticket.getType())
                 .build();
 
         return ticketDto;
@@ -24,6 +25,7 @@ public class DtoUtility {
                 .ticketNo(ticketDto.getTicketNo())
                 .bookingTime(ticketDto.getBookingTime())
                 .status(ticketDto.getStatus())
+                .type(ticketDto.getType())
                 .build();
 
         return ticket;
